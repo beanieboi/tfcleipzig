@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>1. TFC Leipzig - Die Nummer 1 der Heldenstadt.</title>
+
+    <%= stylesheet_link_tag "bootstrap.min" %>
+    <%= stylesheet_link_tag "site" %>
+  </head>
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top" id="mainNav">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <%= link_to 'Start', '/' %>
+              <%= link_to 'Impressum', '/impressum.html' %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <%= image_tag 'tfc_leipzig.png' %>
+        1. TFC Leipzig
+        Die Nummer 1 in der Heldenstadt.
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <!-- Sponsors -->
+    <footer class="py-5 bg-white">
+      <div class="container text-center">
+        <%= image_tag 'sponsor_blindow.png', alt: "Sponsor Bernd-Blindow-Schulen Leipzig" %>
+        <%= image_tag 'sponsor_centralgestalt.png', alt: 'Sponsor Centralgestalt' %>
+        <%= image_tag 'sponsor_kickers.png', alt: 'Sponsor Kickers In' %>
+        <%= image_tag 'sponsor_webshield.png', alt: 'Sponsor Webshield' %>
+        <br />
+        <%= image_tag 'dtfl_male.png', alt: 'Deutsche Tischfussball Liga' %>
+        <%= image_tag 'mtfv.png', alt: 'Mittldeutscher Tischfussballverband e.V.' %>
+      </div>
+    </footer>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; 1. TFC Leipzig 2018</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
