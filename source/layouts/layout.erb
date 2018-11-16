@@ -24,11 +24,15 @@
         </div>
       </div>
     </nav>
-    <header class="bg-primary text-white">
-      <div class="container text-center">
-        <%= image_tag 'tfc_leipzig.png' %>
-        1. TFC Leipzig
-        Die Nummer 1 in der Heldenstadt.
+    <header class="bg-tfc-color text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <%= image_tag 'tfc_leipzig.png', class: "tfc-logo", alt: "1. TFC Leipzig" %>
+            <div class="tfc-title">1. TFC Leipzig</div>
+            <div class="tfc-subtitle">Die Nummer 1 in der Heldenstadt.</div>
+          <div>
+        <div>
       </div>
     </header>
 
@@ -37,13 +41,28 @@
     <!-- Sponsors -->
     <footer class="py-5 bg-white">
       <div class="container text-center">
-        <%= image_tag 'sponsor_blindow.png', alt: "Sponsor Bernd-Blindow-Schulen Leipzig" %>
+        <% link_to 'https://www.blindow.de/leipzig-bbs' do %>
+          <%= image_tag 'sponsor_blindow.png', alt: "Sponsor Bernd-Blindow-Schulen Leipzig" %>
+        <% end %>
+
         <%= image_tag 'sponsor_centralgestalt.png', alt: 'Sponsor Centralgestalt' %>
-        <%= image_tag 'sponsor_kickers.png', alt: 'Sponsor Kickers In' %>
-        <%= image_tag 'sponsor_webshield.png', alt: 'Sponsor Webshield' %>
+
+        <% link_to 'https://www.facebook.com/Kickers-in-131551600227218/' do %>
+          <%= image_tag 'sponsor_kickers.png', alt: 'Sponsor Kickers In' %>
+        <% end %>
+
+        <% link_to 'https://www.webshieldltd.com' do %>
+          <%= image_tag 'sponsor_webshield.png', alt: 'Sponsor Webshield' %>
+        <% end %>
         <br />
-        <%= image_tag 'dtfl_male.png', alt: 'Deutsche Tischfussball Liga' %>
-        <%= image_tag 'mtfv.png', alt: 'Mittldeutscher Tischfussballverband e.V.' %>
+
+        <% link_to 'https://dtfl.de' do %>
+          <%= image_tag 'dtfl_male.png', alt: 'Deutsche Tischfussball Liga' %>
+        <% end %>
+
+        <% link_to 'http://www.mtfv1.de/' do %>
+          <%= image_tag 'mtfv.png', alt: 'Mittldeutscher Tischfussballverband e.V.' %>
+        <% end %>
       </div>
     </footer>
     <!-- Footer -->
