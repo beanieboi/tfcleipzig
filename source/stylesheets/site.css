@@ -23,12 +23,18 @@ a:link, a:hover, a:visited {
 }
 
 .nav-item a {
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 .tfc-logo {
   float: left;
   padding-right: 40px;
+}
+
+@media (max-width: 992px) {
+  .tfc-logo {
+    float:none;
+  }
 }
 
 .tfc-title {
@@ -37,10 +43,22 @@ a:link, a:hover, a:visited {
   font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
 }
 
+@media (max-width: 992px) {
+  .tfc-title {
+    font-size: 40px;
+  }
+}
+
 .tfc-subtitle {
   font-size: 20px;
   text-transform: uppercase;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+@media (max-width: 992px) {
+  .tfc-subtitle {
+    font-size: 15px;
+  }
 }
 
 .bg-tfc-color {
