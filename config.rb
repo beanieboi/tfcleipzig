@@ -37,18 +37,12 @@ page '/*.txt', layout: false
 #   end
 # end
 
-# Build-specific configuration
-# https://middlemanapp.com/advanced/configuration/#environment-specific-settings
+activate :inline
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
-
-activate :deploy do |deploy|
-  deploy.deploy_method  = :ftp
-  deploy.host           = 'ftp.example.com'
-  deploy.path           = '/srv/www/site'
-  deploy.user           = 'tvaughan'
-  deploy.password       = 'secret'
+configure :build do
+  activate :minify_css, inline: true
+  activate :minify_javascript
+  activate :asset_hash
+  # activate :gzip
+  activate :minify_html
 end
