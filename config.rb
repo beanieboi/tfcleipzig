@@ -42,7 +42,7 @@ activate :inline
 configure :build do
   activate :minify_css, inline: true
   activate :minify_javascript
-  activate :asset_hash
+  activate :asset_hash, ignore: %r{^assets/static/.*}
   # activate :gzip
   activate :minify_html
 end
