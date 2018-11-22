@@ -64,3 +64,8 @@ a:link, a:hover, a:visited {
 .bg-tfc-color {
   background-color: #004e70;
 }
+
+.logos img {
+  box-sizing: border-box;
+  padding: 5px;
+}
