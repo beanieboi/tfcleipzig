@@ -1,3 +1,5 @@
+require 'html-proofer'
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -19,10 +21,10 @@ configure :build do
   activate :minify_html
 end
 
-activate :deploy do |deploy|
-  deploy.deploy_method   = :ftp
-  deploy.host = 'tfc-leipzig.com'
-  deploy.path = '/web'
-  deploy.user = ENV.fetch('TFC_FTP_USER')
-  deploy.password = ENV.fetch('TFC_FTP_PASSWORD')
+after_build do |builder|
+  begin
+    HTMLProofer.check_directory(config[:build_dir], assume_extension: true).run
+  rescue RuntimeError => e
+    puts e
+  end
 end
