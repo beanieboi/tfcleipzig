@@ -1,0 +1,13 @@
+title: 1. TFC Leipzig e.V.
+description: Die Nummer 1 der Heldenstadt.
+url: https://tfc-leipzig.com
+
+destination: build
+
+exclude:
+  - build
+  - config.rb
+  - Gemfile
+  - Gemfile.lock
+  - source
+  - vendor

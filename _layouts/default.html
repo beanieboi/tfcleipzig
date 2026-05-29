@@ -7,9 +7,9 @@
     <meta name="author" content="">
     <title>1. TFC Leipzig e.V. - Die Nummer 1 der Heldenstadt.</title>
 
-    <%= stylesheet_link_tag "bootstrap.min" %>
-    <%= stylesheet_link_tag "site" %>
-    <%= favicon_tag 'images/favicon.png' %>
+    <link href="{{ '/stylesheets/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/stylesheets/site.css' | relative_url }}" rel="stylesheet">
+    <link href="{{ '/images/favicon.png' | relative_url }}" rel="icon" type="image/png">
   </head>
   <body id="page-top">
     <!-- Navigation -->
@@ -17,10 +17,10 @@
       <div class="container">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <%= link_to 'Start', '/' %>
+            <a href="{{ '/' | relative_url }}">Start</a>
           </li>
           <li class="nav-item">
-            <%= link_to 'Impressum', '/impressum.html' %>
+            <a href="{{ '/impressum.html' | relative_url }}">Impressum</a>
           </li>
         </ul>
       </div>
@@ -29,7 +29,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <%= image_tag 'tfc_leipzig.png', class: "tfc-logo", alt: "1. TFC Leipzig" %>
+            <img src="{{ '/images/tfc_leipzig.png' | relative_url }}" class="tfc-logo" alt="1. TFC Leipzig">
             <div class="tfc-title">1. TFC Leipzig</div>
             <div class="tfc-subtitle">Die Nummer 1 in der Heldenstadt.</div>
           <div>
@@ -37,7 +37,7 @@
       </div>
     </header>
 
-    <%= yield %>
+    {{ content }}
 
     <!-- Footer -->
     <footer class="py-5 bg-white">
