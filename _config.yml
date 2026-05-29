@@ -9,5 +9,6 @@ exclude:
   - config.rb
   - Gemfile
   - Gemfile.lock
+  - README.md
   - source
   - vendor
